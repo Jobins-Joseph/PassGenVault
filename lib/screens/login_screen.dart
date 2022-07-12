@@ -60,13 +60,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       'PassGen Vault',
                       style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.bold,fontFamily: 'Ubuntu',
                           fontSize: MediaQuery.of(context).size.width < 800
                               ? 27.0
                               : 32.0),
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 15.0,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 10.0),
@@ -77,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       'Log in',
                       style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.bold,fontFamily: 'Ubuntu',
                           fontSize: MediaQuery.of(context).size.width < 800
                               ? 27.0
                               : 32.0),
@@ -86,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               SizedBox(
-                height: 8.0,
+                height: 35.0,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -100,13 +103,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
               SizedBox(
-                height: 20.0,
+                height: 40.0,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 10.0),
+                padding: const EdgeInsets.only(left: 15.0),
                 child: Text(
                   'Master Password',
-                  style: TextStyle(color: Colors.white70),
+                  style: TextStyle(color: Colors.white70,fontFamily: 'Ubuntu',),
                 ),
               ),
               SingleChildScrollView(
@@ -143,14 +146,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8.0)),
                         hintText: 'Enter Your Password',
-                        hintStyle: TextStyle(color: Colors.white),
+                        hintStyle: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',),
                       ),
                     ),
                   ),
                 ),
               ),
               SizedBox(
-                height: 10.0,
+                height: 30.0,
               ),
               Padding(
                   padding: const EdgeInsets.only(left: 10.0),
@@ -166,17 +169,21 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                       },
                       child: Container(
-                        height: 60.0,
+                        height: 55.0,
                         width: MediaQuery.of(context).size.width - 20.0,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.0),
-                            color: Color(0xff14279B)),
+                            gradient: LinearGradient(
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [Color(0xff2aa7f3), Color(0xff2463f6)]),
+                            borderRadius: BorderRadius.circular(35.0)),
                         child: Center(
                           child: Text(
                             'Log in',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 24.0,
+                                fontFamily: 'Ubuntu',
                                 fontWeight: FontWeight.bold),
                           ),
                         ),

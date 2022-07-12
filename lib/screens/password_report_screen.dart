@@ -94,14 +94,19 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xff151922),
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xff242a33),
+        title: Text(
+          'Password Health Report',
+          style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu', fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new_rounded,
-            color: Colors.black,
+            color: Colors.white,
           ),
           onPressed: () => Navigator.pop(context),
         ),
@@ -114,13 +119,6 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Password Health Report',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 26.0),
-                ),
                 SizedBox(
                   height: 5.0,
                 ),
@@ -144,7 +142,7 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
                       : 'Weak Passwords Found',
                   style: TextStyle(
                       color: Colors.red,
-                      fontSize: 22.0,
+                      fontSize: 22.0,fontFamily: 'Ubuntu',
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
@@ -169,7 +167,7 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
                               'No Weak Passwords Found.',
                               style: TextStyle(
                                   color: Colors.green,
-                                  fontSize: 20.0,
+                                  fontSize: 20.0,fontFamily: 'Ubuntu',
                                   fontWeight: FontWeight.bold),
                             ),
                           ],
@@ -225,7 +223,7 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
                   : 'Strong Passwords Found.',
               style: TextStyle(
                   color: Colors.green,
-                  fontSize: 22.0,
+                  fontSize: 22.0,fontFamily: 'Ubuntu',
                   fontWeight: FontWeight.w700),
             ),
             SizedBox(
@@ -249,7 +247,7 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
                               'No Strong Passwords Found.',
                               style: TextStyle(
                                   color: Colors.red,
-                                  fontSize: 20.0,
+                                  fontSize: 20.0,fontFamily: 'Ubuntu',
                                   fontWeight: FontWeight.bold),
                             ),
                           ],
@@ -300,7 +298,7 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
               'Is The Average Password Length.',
               style: TextStyle(
                   color: Colors.red,
-                  fontSize: 19.0,
+                  fontSize: 19.0,fontFamily: 'Ubuntu',
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
@@ -315,7 +313,7 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
             ),
             Text(weakPassword.length != 0
                 ? 'Please Change Your Weak Password To Make Your Online Accounts More Secure.'
-                : '', style: TextStyle(color: Colors.red, fontSize: 20.0),)
+                : '', style: TextStyle(color: Colors.red, fontSize: 20.0,fontFamily: 'Ubuntu'),)
           ],
         ),
       ),

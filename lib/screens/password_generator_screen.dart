@@ -55,10 +55,10 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
       appBar: AppBar(
         brightness: Brightness.dark,
         elevation: 0.0,
-        backgroundColor: Color(0xff151922),
+        backgroundColor: Color(0xff242a33),
         title: Text(
           'Password Generator',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400),
+          style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu', fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         leading: IconButton(
@@ -80,6 +80,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 16.0,
+                  fontFamily: 'Ubuntu',
                   fontWeight: FontWeight.w500),
             ),
           ),
@@ -93,7 +94,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
                 height: 50.0,
                 width: MediaQuery.of(context).size.width - 50.0,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     color: Color(0xff2E3647)),
                 child: Center(
                     child: Text(
@@ -113,7 +114,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
               'LENGTH: $length',
               style: TextStyle(
                   color: Colors.white,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w500,fontFamily: 'Ubuntu',
                   fontSize: 14.0),
             ),
           ),
@@ -128,8 +129,8 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
               },
               divisions: 20,
               label: '$length',
-              activeColor: Colors.red,
-              inactiveColor: Colors.red,
+              activeColor: Colors.lightBlueAccent,
+              inactiveColor: Colors.lightBlueAccent,
               min: 0.0,
               max: 20.0,
             ),
@@ -141,7 +142,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
             padding: const EdgeInsets.fromLTRB(23.0, 0.0, 23.0, 0.0),
             child: Text(
               'SETTINGS',
-              style: TextStyle(color: Colors.white, fontSize: 15.0),
+              style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu', fontSize: 15.0),
             ),
           ),
           SizedBox(
@@ -165,7 +166,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
                         'Include Symbols',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 20.0,fontFamily: 'Ubuntu',
                             fontWeight: FontWeight.w500),
                       ),
                       Switch(
@@ -205,7 +206,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
                         'Include Numbers',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 20.0,fontFamily: 'Ubuntu',
                             fontWeight: FontWeight.w500),
                       ),
                       Switch(
@@ -225,7 +226,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
             ],
           ),
           SizedBox(
-            height: 10.0,
+            height: 20.0,
           ),
           GestureDetector(
             onTap: () {
@@ -237,22 +238,22 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 60.0,
-                  width: MediaQuery.of(context).size.width - 50.0,
+                  height: 50.0,
+                  width: MediaQuery.of(context).size.width - 60.0,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
-                          colors: [Color(0xff024DE2), Color(0xff001F5C)]),
-                      borderRadius: BorderRadius.circular(8.0)),
+                          colors: [Color(0xff2aa7f3), Color(0xff2463f6)]),
+                      borderRadius: BorderRadius.circular(35.0)),
                   child: Center(
                     child: Text(
                       'Generate Password',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 24.0),
+                          fontWeight: FontWeight.bold,fontFamily: 'Ubuntu',
+                          fontSize: 20.0),
                     ),
                   ),
                 ),
@@ -260,7 +261,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
             ),
           ),
           SizedBox(
-            height: 8.0,
+            height: 15.0,
           ),
           GestureDetector(
             onTap: () {
@@ -270,19 +271,22 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 60.0,
-                  width: MediaQuery.of(context).size.width - 50.0,
+                  height: 50.0,
+                  width: MediaQuery.of(context).size.width - 60.0,
                   decoration: BoxDecoration(
-                      color: Color(0xff344055),
-                      borderRadius: BorderRadius.circular(8.0)),
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [Color(0xff2E3647), Color(0xff262f3b)]),
+                      borderRadius: BorderRadius.circular(35.0)),
                   child: Center(
                     child: Text(
                       'Copy To Clipboard',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 24.0),
+                          fontWeight: FontWeight.bold,fontFamily: 'Ubuntu',
+                          fontSize: 20.0),
                     ),
                   ),
                 ),

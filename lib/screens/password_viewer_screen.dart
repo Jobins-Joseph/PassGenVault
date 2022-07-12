@@ -50,8 +50,8 @@ class _PasswordViewerState extends State<PasswordViewer> {
       backgroundColor: Color(0xff151922),
       appBar: AppBar(
         brightness: Brightness.dark,
-        backgroundColor: Color(0xff151922),
-        elevation: 0.0,
+        backgroundColor: Color(0xff242a33),
+        elevation: 10.0,
         centerTitle: false,
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
@@ -84,11 +84,11 @@ class _PasswordViewerState extends State<PasswordViewer> {
                       shape: RoundedRectangleBorder(
                           borderRadius:
                               BorderRadius.all(Radius.circular(20.0))),
-                      title: new Text("Are you sure ?", style: TextStyle(color: Colors.white),),
-                      content: new Text("Do you want to delete this password?", style: TextStyle(color: Colors.white),),
+                      title: new Text("Are you sure ?", style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',),),
+                      content: new Text("Do you want to delete this password?", style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',),),
                       actions: <Widget>[
                         new TextButton(
-                          child: new Text("Yes", style: TextStyle(color: Colors.white),),
+                          child: new Text("Yes", style: TextStyle(color: Colors.red,fontFamily: 'Ubuntu',),),
                           onPressed: () {
                             PasswordDatabase.instance
                                 .delete(passwords[widget.index].id!);
@@ -98,7 +98,7 @@ class _PasswordViewerState extends State<PasswordViewer> {
                           },
                         ),
                         new TextButton(
-                          child: new Text("No", style: TextStyle(color: Colors.white),),
+                          child: new Text("No", style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',),),
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
@@ -116,7 +116,7 @@ class _PasswordViewerState extends State<PasswordViewer> {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(20.0, 0.0, 10.0, 0.0),
+        padding: EdgeInsets.fromLTRB(20.0, 20.0, 10.0, 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -126,7 +126,7 @@ class _PasswordViewerState extends State<PasswordViewer> {
                   'Website Name :',
                   style: TextStyle(
                       color: Colors.white70,
-                      fontSize: 16.0,
+                      fontSize: 16.0,fontFamily: 'Ubuntu',
                       fontWeight: FontWeight.w600),
                 ),
               ],
@@ -150,7 +150,7 @@ class _PasswordViewerState extends State<PasswordViewer> {
                   'Username :',
                   style: TextStyle(
                       color: Colors.white70,
-                      fontSize: 16.0,
+                      fontSize: 16.0,fontFamily: 'Ubuntu',
                       fontWeight: FontWeight.w600),
                 ),
                 IconButton(
@@ -180,7 +180,7 @@ class _PasswordViewerState extends State<PasswordViewer> {
                   'Password :',
                   style: TextStyle(
                       color: Colors.white70,
-                      fontSize: 16.0,
+                      fontSize: 16.0,fontFamily: 'Ubuntu',
                       fontWeight: FontWeight.w600),
                 ),
                 IconButton(

@@ -77,10 +77,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Colors.white,
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'SF'),
+                  fontFamily: 'Roboto-Black'),
             ),
             Text(
-              "Click on the '+' icon to add",
+              "Click on the ' + ' icon to add",
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.0,
@@ -102,11 +102,14 @@ class _HomeScreenState extends State<HomeScreen> {
           height: 60,
           child: Icon(
             Icons.add,
-            size: 35,
+            size: 40,
           ),
           decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              color: Color(0xff0F4DF3)),
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Color(0xff2aa7f3), Color(0xff2463f6)]),
+              borderRadius: BorderRadius.circular(35.0)),
         ),
         onPressed: () => Navigator.push(
             context,
@@ -121,9 +124,10 @@ class _HomeScreenState extends State<HomeScreen> {
           SliverAppBar(
             floating: true,
             brightness: Brightness.dark,
-            backgroundColor: Color(0xff151922),
+            backgroundColor: Color(0xff242a33),
             title: Text("Save & Manage Passwords",
-                style: TextStyle(color: Colors.white)),
+
+                style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold),),
             actions: [
               IconButton(
                   onPressed: () => Navigator.push(context,
@@ -136,16 +140,19 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           SliverPadding(
-            padding: EdgeInsets.only(left: 14.0),
+            padding: EdgeInsets.fromLTRB(20.0, 20.0, 10.0, 0.0),
             sliver: SliverToBoxAdapter(
-                child: Text('                                Your Passwords(${passwords.length})',
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontSize: 15.0,
-                      fontWeight: FontWeight.w500,
-                    ))),
+                child: Center(
+                    child:Text('Your Passwords (${passwords.length})',
+                        style: TextStyle(
+                          color: Colors.lightBlueAccent,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w500,
+                            fontFamily: 'Ubuntu'
+                        ))),
+                ),
           ),
-          SliverToBoxAdapter(child: SizedBox(height: 10.0)),
+          SliverToBoxAdapter(child: SizedBox(height: 15.0)),
           passwords.length == 0
               ? SliverToBoxAdapter(
                   child: noPasswordsFound(),
@@ -155,17 +162,23 @@ class _HomeScreenState extends State<HomeScreen> {
                   return Column(
                     children: [
                       ListTile(
+                        shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(35.0)),
+                          tileColor: Color(0xff242a33),
+                          textColor: Colors.white,
+                         contentPadding: EdgeInsets.fromLTRB(30.0, 5.0, 5.0, 0.0),
                         title: Text(Encrypt.instance.encryptOrDecryptText(passwords[index].title, false),
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 26.0,
+                                fontSize: 23.0,
+                                fontFamily: 'Ubuntu',
                                 fontWeight: FontWeight.bold)),
                         subtitle: Text(
                           passwords[index].username == ''
                               ? 'No Username'
                               : Encrypt.instance.encryptOrDecryptText(passwords[index].username, false),
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w500),
+                              color: Colors.white, fontWeight: FontWeight.w500,fontFamily: 'Ubuntu',),
                         ),
                         onTap: () => Navigator.push(
                             context,
@@ -177,6 +190,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                     index: index,
                                     id: passwords[index].id!,
                                     refresh: refreshNotes))),
+                      ),
+                      SizedBox(
+                        height: 15.0,
                       ),
                     ],
                   );
@@ -326,141 +342,3 @@ class _MenuState extends State<Menu> {
 }
 
 
-// class Menu extends StatefulWidget {
-//   late int index;
-//   late List<Password> passwords;
-//   late String password;
-//   late String username;
-
-//   Menu(
-//       {required this.index,
-//       required this.passwords,
-//       required this.username,
-//       required this.password});
-
-//   @override
-//   _MenuState createState() => _MenuState();
-// }
-
-// class _MenuState extends State<Menu> {
-//   bool isVisible = false;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       // height: 100.0,
-//       width: MediaQuery.of(context).size.width - 20.0,
-//       decoration: BoxDecoration(
-//           color: Colors.white,
-//           boxShadow: [
-//             BoxShadow(
-//               color: Colors.black26,
-//               blurRadius: 25.0,
-//               offset: Offset(0.0, 0.9),
-//             )
-//           ],
-//           borderRadius: BorderRadius.all(
-//             Radius.circular(8.0),
-//           )),
-//       child: Padding(
-//         padding: const EdgeInsets.only(left: 12.0, right: 5.0, top: 8.0),
-//         child: Column(
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: [
-//             Row(
-//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//               children: [
-//                 Column(
-//                   crossAxisAlignment: CrossAxisAlignment.start,
-//                   children: [
-//                     Text(
-//                       'Username',
-//                       style: TextStyle(
-//                           color: Colors.black,
-//                           fontWeight: FontWeight.w600,
-//                           fontSize: 16.0),
-//                     ),
-//                     Text(
-//                       widget.passwords[widget.index].username,
-//                       maxLines: 1,
-//                       overflow: TextOverflow.ellipsis,
-//                       style: TextStyle(
-//                           color: Colors.red,
-//                           fontWeight: FontWeight.w500,
-//                           fontSize: 22.0),
-//                     )
-//                   ],
-//                 ),
-//                 IconButton(
-//                     onPressed: () {
-//                       Clipboard.setData(ClipboardData(text: widget.username));
-//                     },
-//                     icon: Icon(Icons.copy))
-//               ],
-//             ),
-//             Row(
-//               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//               children: [
-//                 Column(
-//                   crossAxisAlignment: CrossAxisAlignment.start,
-//                   children: [
-//                     Text(
-//                       'Password',
-//                       style: TextStyle(
-//                           color: Colors.black,
-//                           fontWeight: FontWeight.w600,
-//                           fontSize: 16.0),
-//                     ),
-//                     Visibility(
-//                       visible: isVisible,
-//                       child: Text(
-//                         widget.passwords[widget.index].password,
-//                         style: TextStyle(
-//                             color: Colors.red,
-//                             fontSize: 22.0,
-//                             fontWeight: FontWeight.w600),
-//                       ),
-//                     ),
-//                     !isVisible
-//                         ? Text(
-//                             isVisible
-//                                 ? ''
-//                                 : '*' *
-//                                     widget.passwords[widget.index].password
-//                                         .length,
-//                             style: TextStyle(
-//                               color: Colors.red,
-//                               fontSize: 28.0,
-//                             ),
-//                           )
-//                         : SizedBox.shrink(),
-//                   ],
-//                 ),
-//                 Spacer(),
-//                 IconButton(
-//                     onPressed: () {
-//                       Clipboard.setData(ClipboardData(text: widget.password));
-//                     },
-//                     icon: Icon(Icons.copy)),
-//                 IconButton(
-//                   onPressed: () {
-//                     setState(() {
-//                       isVisible = !isVisible;
-//                     });
-//                   },
-//                   icon: Icon(isVisible
-//                       ? Icons.visibility_off_rounded
-//                       : Icons.visibility_rounded),
-//                   tooltip: isVisible ? 'Hide' : 'Show',
-//                 )
-//               ],
-//             ),
-//             const SizedBox(
-//               height: 5.0,
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }

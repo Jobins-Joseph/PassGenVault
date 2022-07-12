@@ -11,14 +11,14 @@ class _AboutScreenState extends State<AboutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 221, 222, 225),
+        backgroundColor: Color(0xff151922),
         appBar: AppBar(
           brightness: Brightness.dark,
           elevation: 0.0,
-          backgroundColor: Color.fromARGB(255, 6, 6, 6),
+          backgroundColor: Color(0xff242a33),
           title: Text(
             'About',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold),
           ),
           leading: IconButton(
             icon: Icon(
@@ -29,14 +29,14 @@ class _AboutScreenState extends State<AboutScreen> {
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0.0),
+          padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0.0),
           child: Column(
             children: [
               Container(
                 height: 60.0,
                 width: MediaQuery.of(context).size.width - 30.0,
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 0, 0, 0),
+                    color: Color(0xff343d50),
                     borderRadius: BorderRadius.circular(8.0)),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -46,7 +46,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       Text(
                         'Version',
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.white,fontFamily: 'Ubuntu',
                             fontWeight: FontWeight.w500,
                             fontSize: 20.0),
                       ),
@@ -54,7 +54,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         '1.0.0',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 20.0,fontFamily: 'Ubuntu',
                             fontWeight: FontWeight.w800),
                       )
                     ],
@@ -62,13 +62,13 @@ class _AboutScreenState extends State<AboutScreen> {
                 ),
               ),
               SizedBox(
-                height: 10.0,
+                height: 20.0,
               ),
               Container(
                 height: 60.0,
                 width: MediaQuery.of(context).size.width - 30.0,
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 250, 6, 6),
+                    color: Color(0xff2aa7f3),
                     borderRadius: BorderRadius.circular(8.0)),
                 child: Padding(
                     padding: const EdgeInsets.fromLTRB(10.0, 17.0, 10.0, 0.0),
@@ -76,10 +76,14 @@ class _AboutScreenState extends State<AboutScreen> {
                       'Created by PassHub INC.',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20.0,
+                          fontSize: 20.0,fontFamily: 'Ubuntu',
                           fontWeight: FontWeight.w600),
                     )),
+              ),
+              SizedBox(
+                height: 20.0,
               )
+
             ],
           ),
         ));

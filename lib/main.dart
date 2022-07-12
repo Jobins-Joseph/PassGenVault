@@ -40,6 +40,7 @@ class _MyAppState extends State<MyApp> {
 
     setState(() => isLoading = false);
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

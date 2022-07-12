@@ -56,7 +56,7 @@ class _EditTaskState extends State<EditTask> {
           centerTitle: false,
           title: Text(
             'Edit Password',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold ),
           ),
           leading: IconButton(
             onPressed: () => Navigator.pop(context),
@@ -78,7 +78,7 @@ class _EditTaskState extends State<EditTask> {
                 'Website Name',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 14.0,
+                    fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
               SizedBox(
@@ -127,7 +127,7 @@ class _EditTaskState extends State<EditTask> {
                 'Username/Email',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 14.0,
+                    fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
               SizedBox(
@@ -176,7 +176,7 @@ class _EditTaskState extends State<EditTask> {
                 'Password',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 14.0,
+                    fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
               SizedBox(
@@ -296,15 +296,18 @@ class _EditTaskState extends State<EditTask> {
                   height: 60.0,
                   width: MediaQuery.of(context).size.width - 40.0,
                   decoration: BoxDecoration(
-                      color: Color(0xff14279B),
-                      borderRadius: BorderRadius.circular(8.0)),
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [Color(0xff2aa7f3), Color(0xff2463f6)]),
+                      borderRadius: BorderRadius.circular(35.0)),
                   child: Center(
                     child: Text(
                       'Save Password',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 24.0,
+                          fontSize: 24.0,fontFamily: 'Ubuntu',
                           fontWeight: FontWeight.bold),
                     ),
                   ),

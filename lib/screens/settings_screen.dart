@@ -9,11 +9,11 @@ class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: Color(0xff151922),
         appBar: AppBar(
           brightness: Brightness.dark,
           elevation: 0.0,
-          backgroundColor: Color.fromARGB(255, 0, 0, 0),
+          backgroundColor: Color(0xff242a33),
           leading: IconButton(
             icon: Icon(
               Icons.arrow_back_ios_new_rounded,
@@ -25,7 +25,7 @@ class Settings extends StatelessWidget {
           ),
           title: Text(
             'Settings',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
         ),
@@ -35,10 +35,10 @@ class Settings extends StatelessWidget {
                 child: Container(
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: Color(0xff151922),
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30.0),
-                      topRight: Radius.circular(30.0))),
+                      topLeft: Radius.circular(10.0),
+                      topRight: Radius.circular(10.0))),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0.0),
                 child: Column(
@@ -46,50 +46,53 @@ class Settings extends StatelessWidget {
                     SizedBox(
                       height: 10.0,
                     ),
-                    // GestureDetector(
-                    //   onTap: () => Navigator.push(
-                    //       context,
-                    //       MaterialPageRoute(
-                    //           builder: (_) => PasswordReportScreen())),
-                    //   child: Container(
-                    //     height: 60.0,
-                    //     width: MediaQuery.of(context).size.width - 10.0,
-                    //     decoration: BoxDecoration(
-                    //         color: Colors.white,
-                    //         borderRadius: BorderRadius.circular(8.0)),
-                    //     child: Padding(
-                    //       padding: const EdgeInsets.all(8.0),
-                    //       child: Row(
-                    //         children: [
-                    //           Icon(
-                    //             Icons.health_and_safety_outlined,
-                    //             color: Colors.black,
-                    //             size: 30.0,
-                    //           ),
-                    //           SizedBox(
-                    //             width: 10.0,
-                    //           ),
-                    //           Expanded(
-                    //             child: Row(
-                    //               mainAxisAlignment:
-                    //                   MainAxisAlignment.spaceBetween,
-                    //               children: [
-                    //                 Text(
-                    //                   'Password Health',
-                    //                   style: TextStyle(
-                    //                       color: Colors.black, fontSize: 21.0),
-                    //                 ),
-                    //                 Icon(Icons.arrow_forward_ios_rounded)
-                    //               ],
-                    //             ),
-                    //           ),
-                    //         ],
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ),
+                     GestureDetector(
+                       onTap: () => Navigator.push(
+                          context,
+                           MaterialPageRoute(
+                               builder: (_) => PasswordReportScreen())),
+                       child: Container(
+                         height: 60.0,
+                         width: MediaQuery.of(context).size.width - 10.0,
+                         decoration: BoxDecoration(
+                             gradient: LinearGradient(
+                                 begin: Alignment.topLeft,
+                                 end: Alignment.bottomRight,
+                                 colors: [Color(0xff86c9f8), Color(0xffabd1fa)]),
+                             borderRadius: BorderRadius.circular(8.0)),
+                         child: Padding(
+                           padding: const EdgeInsets.all(8.0),
+                           child: Row(
+                             children: [
+                               Icon(
+                                 Icons.health_and_safety_outlined,
+                                 color: Colors.black,
+                                 size: 30.0,
+                               ),
+                               SizedBox(
+                                 width: 10.0,
+                               ),
+                               Expanded(
+                                 child: Row(
+                                   mainAxisAlignment:
+                                       MainAxisAlignment.spaceBetween,
+                                   children: [
+                                     Text(
+                                       'Password Health',
+                                       style: TextStyle(
+                                           color: Colors.black, fontSize: 21.0,fontFamily: 'Ubuntu',),
+                                     ),
+                                     Icon(Icons.arrow_forward_ios_rounded)
+                                   ],
+                                 ),
+                               ),
+                             ],
+                           ),
+                         ),
+                       ),
+                     ),
                     SizedBox(
-                      height: 10.0,
+                      height: 20.0,
                     ),
                     GestureDetector(
                       onTap: () => Navigator.push(context,
@@ -98,10 +101,10 @@ class Settings extends StatelessWidget {
                         height: 60.0,
                         width: MediaQuery.of(context).size.width - 10.0,
                         decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 0, 1, 3),
-                            borderRadius: BorderRadius.circular(8.0)),
+                            color: Color(0xff343d50),
+                            borderRadius: BorderRadius.circular(10.0)),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Row(
                             children: [
                               Icon(
@@ -120,7 +123,7 @@ class Settings extends StatelessWidget {
                                     Text(
                                       'Security',
                                       style: TextStyle(
-                                          color: Colors.white, fontSize: 22.0),
+                                          color: Colors.white, fontSize: 22.0,fontFamily: 'Ubuntu',),
                                     ),
                                     Icon(
                                       Icons.arrow_forward_ios_rounded,
@@ -135,7 +138,7 @@ class Settings extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 10.0,
+                      height: 20.0,
                     ),
                     GestureDetector(
                       onTap: () => Navigator.push(context,
@@ -144,10 +147,10 @@ class Settings extends StatelessWidget {
                         height: 60.0,
                         width: MediaQuery.of(context).size.width - 10.0,
                         decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            borderRadius: BorderRadius.circular(8.0)),
+                            color: Color(0xff343d50),
+                            borderRadius: BorderRadius.circular(10.0)),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Row(
                             children: [
                               Icon(
@@ -166,7 +169,7 @@ class Settings extends StatelessWidget {
                                     Text(
                                       'About',
                                       style: TextStyle(
-                                          color: Colors.white, fontSize: 22.0),
+                                          color: Colors.white, fontSize: 22.0,fontFamily: 'Ubuntu',),
                                     ),
                                     Icon(
                                       Icons.arrow_forward_ios_rounded,

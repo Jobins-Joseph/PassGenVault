@@ -47,7 +47,7 @@ class _AddTaskState extends State<AddTask> {
           centerTitle: false,
           title: Text(
             'Add New Password',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold),
           ),
           leading: IconButton(
             onPressed: () => Navigator.pop(context),
@@ -66,7 +66,7 @@ class _AddTaskState extends State<AddTask> {
                 'Website Name',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 14.0,
+                    fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
               SizedBox(
@@ -113,7 +113,7 @@ class _AddTaskState extends State<AddTask> {
                 'Username/Email',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 14.0,
+                    fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
               SizedBox(
@@ -159,7 +159,7 @@ class _AddTaskState extends State<AddTask> {
                 'Password',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 14.0,
+                    fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
               SizedBox(
@@ -229,24 +229,27 @@ class _AddTaskState extends State<AddTask> {
                     Navigator.pop(context);
                   }
                 },
-                child: Container(
-                  height: 60.0,
-                  width: MediaQuery.of(context).size.width - 50.0,
+                child: Center(child: Container(
+                  height: 50.0,
+                  width: MediaQuery.of(context).size.width - 60.0,
                   decoration: BoxDecoration(
-                      color: Color(0xff14279B),
-                      borderRadius: BorderRadius.circular(8.0)),
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [Color(0xff2aa7f3), Color(0xff2463f6)]),
+                      borderRadius: BorderRadius.circular(35.0)),
                   child: Center(
                     child: Text(
                       'Save Password',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 24.0,
+                          fontSize: 24.0,fontFamily: 'Ubuntu',
                           fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
-              ),
+              ),),
               SizedBox(
                 height: 5.0,
               ),
