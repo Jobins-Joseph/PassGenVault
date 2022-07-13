@@ -123,11 +123,10 @@ class _HomeScreenState extends State<HomeScreen> {
         slivers: [
           SliverAppBar(
             floating: true,
-            brightness: Brightness.dark,
-            backgroundColor: Color(0xff242a33),
             title: Text("Save & Manage Passwords",
 
                 style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold),),
+            backgroundColor: Color(0xff050000),
             actions: [
               IconButton(
                   onPressed: () => Navigator.push(context,
@@ -137,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => Navigator.push(
                       context, MaterialPageRoute(builder: (_) => Settings())),
                   icon: Icon(Icons.settings, color: Colors.white)),
-            ],
+            ], systemOverlayStyle: SystemUiOverlayStyle.light,
           ),
           SliverPadding(
             padding: EdgeInsets.fromLTRB(20.0, 20.0, 10.0, 0.0),
@@ -145,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Center(
                     child:Text('Your Passwords (${passwords.length})',
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
+                          color: Colors.red,
                           fontSize: 18.0,
                           fontWeight: FontWeight.w500,
                             fontFamily: 'Ubuntu'
