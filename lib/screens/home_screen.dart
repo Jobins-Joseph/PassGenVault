@@ -77,13 +77,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Colors.white,
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'Roboto-Black'),
+                  fontFamily: 'Ubuntu',),
             ),
             Text(
               "Click on the ' + ' icon to add",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20.0,
+                  fontSize: 20.0,fontFamily: 'Ubuntu',
                   fontWeight: FontWeight.bold),
             ),
           ],
