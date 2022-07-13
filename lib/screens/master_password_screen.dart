@@ -20,7 +20,7 @@ class _MasterPasswordScreenState extends State<MasterPasswordScreen> {
         backgroundColor: Color(0xff151922),
         title: Text(
           'Master Password Settings',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',),
         ),
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
@@ -53,7 +53,7 @@ class _MasterPasswordScreenState extends State<MasterPasswordScreen> {
                     textAlign: TextAlign.start,
                     style: TextStyle(
                         color: Colors.white,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w500,fontFamily: 'Ubuntu',
                         fontSize: 20.0),
                   ),
                 ),
