@@ -174,26 +174,26 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
                         )
                       : Row(
                           children: [
-                            Container(
-                              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
-                              height: 100.0,
-                              width: 150.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8.0),
-                                color: Colors.red,
-                              ),
-                              child: Center(
-                                child: Text(
-                                  weakPassword[index].title,
-                                  style: TextStyle(
-                                      fontSize: 24.0,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white),
-                                ),
-                              ),
-                            ),
+                       //     Container(
+                         //     margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
+                           //   height: 100.0,
+                             // width: 150.0,
+                        //      decoration: BoxDecoration(
+                          //      borderRadius: BorderRadius.circular(8.0),
+                            //    color: Colors.red,
+                             // ),
+                              //child: Center(
+                                //child: Text(
+                                 // " ",
+                                  //style: TextStyle(
+                                    //  fontSize: 24.0,
+                                     // fontWeight: FontWeight.bold,
+                                     // color: Colors.white),
+                               // ),
+                             // ),
+                           // ),
                             SizedBox(
-                              width: 5.0,
+                              width: 58.0,
                             )
                           ],
                         );
@@ -208,7 +208,7 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
               color: Colors.black,
             ),
             SizedBox(
-              height: 5.0,
+              height: 40.0,
             ),
             Text(
               strongPasswords(),
@@ -255,22 +255,6 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
                       : Row(
                           children: [
                             Container(
-                              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
-                              height: 120.0,
-                              width: 150.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8.0),
-                                color: Colors.green,
-                              ),
-                              child: Center(
-                                child: Text(
-                                  strongPassword[index].title,
-                                  style: TextStyle(
-                                      fontSize: 24.0,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white),
-                                ),
-                              ),
                             ),
                             SizedBox(
                               width: 5.0,
