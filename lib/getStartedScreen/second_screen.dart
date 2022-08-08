@@ -30,7 +30,7 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff151922),
+      backgroundColor: Color(0xffffffff),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -43,7 +43,7 @@ class _SecondScreenState extends State<SecondScreen> {
               Text(
                 'Register Master Password',
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 26.0,
                     fontWeight: FontWeight.bold),
               ),
@@ -51,7 +51,7 @@ class _SecondScreenState extends State<SecondScreen> {
                 height: 10.0,
               ),
               TextFormField(
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black),
                 maxLength: 60,
                 controller: masterPassword,
                 onFieldSubmitted: (value) {
@@ -59,11 +59,11 @@ class _SecondScreenState extends State<SecondScreen> {
                 },
                 decoration: InputDecoration(
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey),
+                      borderSide: BorderSide(color: Colors.black),
                     ),
                     hintText: 'Enter Master Password',
-                    counterStyle: TextStyle(color: Colors.white),
-                    hintStyle: TextStyle(color: Colors.white)),
+                    counterStyle: TextStyle(color: Colors.black),
+                    hintStyle: TextStyle(color: Colors.black)),
               ),
               SizedBox(
                 height: 10.0,
@@ -82,7 +82,7 @@ class _SecondScreenState extends State<SecondScreen> {
                 height: 60.0,
                 width: MediaQuery.of(context).size.width - 10.0,
                 decoration: BoxDecoration(
-                    color: Color(0xff2E3647),
+                    color: Color(0xff000205),
                     borderRadius: BorderRadius.circular(8.0)),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
@@ -103,8 +103,8 @@ class _SecondScreenState extends State<SecondScreen> {
                             requiredLogin = value;
                           });
                         },
-                        activeTrackColor: Colors.green[500],
-                        activeColor: Colors.white,
+                        activeTrackColor: Colors.white,
+                        activeColor: Colors.red,
                       ),
                     ],
                   ),
@@ -120,7 +120,7 @@ class _SecondScreenState extends State<SecondScreen> {
                       child: Text(
                     _message,
                     maxLines: 3,
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.black),
                   )),
                 ],
               ),
@@ -146,7 +146,7 @@ class _SecondScreenState extends State<SecondScreen> {
                           height: 60.0,
                           width: 200.0,
                           decoration: BoxDecoration(
-                              color: Colors.green,
+                              color: Colors.black,
                               borderRadius: BorderRadius.circular(80.0)),
                           child: Center(
                             child: Text(

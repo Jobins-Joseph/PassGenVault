@@ -13,7 +13,7 @@ class Settings extends StatelessWidget {
         appBar: AppBar(
           brightness: Brightness.dark,
           elevation: 0.0,
-          backgroundColor: Color(0xff242a33),
+          backgroundColor: Color(0xff050404),
           leading: IconButton(
             icon: Icon(
               Icons.arrow_back_ios_new_rounded,
@@ -35,7 +35,7 @@ class Settings extends StatelessWidget {
                 child: Container(
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                  color: Color(0xff151922),
+                  color: Color(0xffffffff),
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10.0),
                       topRight: Radius.circular(10.0))),
@@ -58,7 +58,7 @@ class Settings extends StatelessWidget {
                              gradient: LinearGradient(
                                  begin: Alignment.topLeft,
                                  end: Alignment.bottomRight,
-                                 colors: [Color(0xff86c9f8), Color(0xffabd1fa)]),
+                                 colors: [Color(0xff000000), Color(0xff000000)]),
                              borderRadius: BorderRadius.circular(8.0)),
                          child: Padding(
                            padding: const EdgeInsets.all(8.0),
@@ -66,7 +66,7 @@ class Settings extends StatelessWidget {
                              children: [
                                Icon(
                                  Icons.health_and_safety_outlined,
-                                 color: Colors.black,
+                                 color: Colors.white,
                                  size: 30.0,
                                ),
                                SizedBox(
@@ -80,7 +80,7 @@ class Settings extends StatelessWidget {
                                      Text(
                                        'Password Health',
                                        style: TextStyle(
-                                           color: Colors.black, fontSize: 21.0,fontFamily: 'Ubuntu',),
+                                           color: Colors.white, fontSize: 21.0,fontFamily: 'Ubuntu',),
                                      ),
                                      Icon(Icons.arrow_forward_ios_rounded)
                                    ],
@@ -101,7 +101,7 @@ class Settings extends StatelessWidget {
                         height: 60.0,
                         width: MediaQuery.of(context).size.width - 10.0,
                         decoration: BoxDecoration(
-                            color: Color(0xff343d50),
+                            color: Color(0xff000000),
                             borderRadius: BorderRadius.circular(10.0)),
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
@@ -147,7 +147,7 @@ class Settings extends StatelessWidget {
                         height: 60.0,
                         width: MediaQuery.of(context).size.width - 10.0,
                         decoration: BoxDecoration(
-                            color: Color(0xff343d50),
+                            color: Color(0xff050404),
                             borderRadius: BorderRadius.circular(10.0)),
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),

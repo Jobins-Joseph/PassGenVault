@@ -50,11 +50,12 @@ class _SecurityScreenState extends State<SecurityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff151922),
+
+      backgroundColor: Color(0xffffffff),
       appBar: AppBar(
-        brightness: Brightness.dark,
-        elevation: 0.0,
-        backgroundColor: Color(0xff151922),
+
+        elevation: 1.0,
+        backgroundColor: Color(0xff030000),
         centerTitle: true,
         title: Text(
           'Security',
@@ -76,7 +77,7 @@ class _SecurityScreenState extends State<SecurityScreen> {
               height: 60.0,
               width: MediaQuery.of(context).size.width - 10.0,
               decoration: BoxDecoration(
-                  color: Color(0xff2E3647),
+                  color: Color(0xff000000),
                   borderRadius: BorderRadius.circular(8.0)),
               child: Padding(
                 padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
@@ -91,7 +92,7 @@ class _SecurityScreenState extends State<SecurityScreen> {
                           fontSize: 18.0),
                     ),
                     Switch(
-                      value: users[1].loginRequired,
+                      value: users[0].loginRequired,
                       onChanged: (value) {
                         setState(() {
                           UserDatabase.instance.update(User(
@@ -109,26 +110,22 @@ class _SecurityScreenState extends State<SecurityScreen> {
               ),
             ),
             SizedBox(
-              height: 10.0,
+              height: 25.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Flexible(
                     child: Text(
+
                   _message,
                   maxLines: 3,
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                 )),
               ],
             ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Divider(
-              height: 10.0,
-              color: Colors.grey,
-            ),
+
+
             SizedBox(
               height: 10.0,
             ),
@@ -140,7 +137,7 @@ class _SecurityScreenState extends State<SecurityScreen> {
                 width: MediaQuery.of(context).size.width - 10.0,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7.0),
-                  color: Color(0xff2E3647),
+                  color: Color(0xff030000),
                 ),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(10.0, 18.0, 10.0, 10.0),

@@ -39,21 +39,21 @@ class _AddTaskState extends State<AddTask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff151922),
+        backgroundColor: Color(0xfffdfdfd),
         appBar: AppBar(
           brightness: Brightness.dark,
           elevation: 0.0,
-          backgroundColor: Color(0xff151922),
+          backgroundColor: Color(0xffffffff),
           centerTitle: false,
           title: Text(
             'Add New Password',
-            style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.black,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold),
           ),
           leading: IconButton(
             onPressed: () => Navigator.pop(context),
             icon: Icon(
               Icons.arrow_back_ios_new_rounded,
-              color: Colors.white,
+              color: Colors.black,
             ),
           ),
         ),
@@ -65,7 +65,7 @@ class _AddTaskState extends State<AddTask> {
               Text(
                 'Website Name',
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
@@ -76,8 +76,8 @@ class _AddTaskState extends State<AddTask> {
                 height: 75.0,
                 width: MediaQuery.of(context).size.width - 40.0,
                 child: TextFormField(
-                  style: TextStyle(color: Colors.white),
-                  cursorColor: Colors.white,
+                  style: TextStyle(color: Colors.black),
+                  cursorColor: Colors.black,
                   maxLength: 60,
                   controller: title,
                   onFieldSubmitted: (value) {
@@ -86,20 +86,20 @@ class _AddTaskState extends State<AddTask> {
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(color: Colors.white, width: 2.0),
+                      borderSide: BorderSide(color: Colors.black, width: 2.0),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.white10,
+                        color: Colors.black,
                         width: 2.0,
                       ),
                     ),
-                    counterStyle: TextStyle(color: Colors.white),
+                    counterStyle: TextStyle(color: Colors.black),
                     prefixIcon: Icon(
                       Icons.title,
                       size: 24,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0)),
@@ -112,7 +112,7 @@ class _AddTaskState extends State<AddTask> {
               Text(
                 'Username/Email',
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
@@ -123,7 +123,7 @@ class _AddTaskState extends State<AddTask> {
                 height: 75.0,
                 width: MediaQuery.of(context).size.width - 40.0,
                 child: TextFormField(
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                   maxLength: 60,
                   controller: username,
                   onFieldSubmitted: (value) {
@@ -132,20 +132,20 @@ class _AddTaskState extends State<AddTask> {
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(color: Colors.white, width: 2.0),
+                      borderSide: BorderSide(color: Colors.black, width: 2.0),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.white10,
+                        color: Colors.black,
                         width: 2.0,
                       ),
                     ),
-                    counterStyle: TextStyle(color: Colors.white),
+                    counterStyle: TextStyle(color: Colors.black),
                     prefixIcon: Icon(
                       Icons.email_rounded,
                       size: 24,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0)),
@@ -158,7 +158,7 @@ class _AddTaskState extends State<AddTask> {
               Text(
                 'Password',
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
@@ -169,7 +169,7 @@ class _AddTaskState extends State<AddTask> {
                 height: 75.0,
                 width: MediaQuery.of(context).size.width - 40.0,
                 child: TextFormField(
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                   maxLength: 60,
                   controller: password,
                   onFieldSubmitted: (value) {
@@ -178,22 +178,22 @@ class _AddTaskState extends State<AddTask> {
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(color: Colors.white, width: 2.0),
+                      borderSide: BorderSide(color: Colors.black, width: 2.0),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.white10,
+                        color: Colors.black,
                         width: 2.0,
                       ),
                     ),
                     prefixIcon: Icon(
                       Icons.password_rounded,
                       size: 24,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
-                    counterStyle: TextStyle(color: Colors.white),
-                    fillColor: Colors.white,
+                    counterStyle: TextStyle(color: Colors.black),
+                    fillColor: Colors.black,
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0)),
                   ),
@@ -236,7 +236,7 @@ class _AddTaskState extends State<AddTask> {
                       gradient: LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
-                          colors: [Color(0xff2aa7f3), Color(0xff2463f6)]),
+                          colors: [Color(0xff000000), Color(0xff000000)]),
                       borderRadius: BorderRadius.circular(35.0)),
                   child: Center(
                     child: Text(
@@ -258,7 +258,7 @@ class _AddTaskState extends State<AddTask> {
                 children: [
                   Text(
                     status,
-                    style: TextStyle(color: Colors.white, fontSize: 16.0),
+                    style: TextStyle(color: Colors.black, fontSize: 16.0),
                   ),
                 ],
               )

@@ -13,14 +13,14 @@ class _MasterPasswordScreenState extends State<MasterPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff151922),
+      backgroundColor: Color(0xffffffff),
       appBar: AppBar(
         brightness: Brightness.dark,
         elevation: 0.0,
-        backgroundColor: Color(0xff151922),
+        backgroundColor: Color(0xff050000),
         title: Text(
           'Master Password Settings',
-          style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',),
+          style: TextStyle(color: Colors.black,fontFamily: 'Ubuntu',),
         ),
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
@@ -44,7 +44,7 @@ class _MasterPasswordScreenState extends State<MasterPasswordScreen> {
                 width: MediaQuery.of(context).size.width - 10.0,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7.0),
-                  color: Color(0xff2E3647),
+                  color: Color(0xff000303),
                 ),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(10.0, 18.0, 10.0, 10.0),

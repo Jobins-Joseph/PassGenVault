@@ -123,7 +123,6 @@ class _HomeScreenState extends State<HomeScreen> {
         slivers: [
           SliverAppBar(
             floating: true,
-            brightness: Brightness.dark,
             backgroundColor: Color(0xff242a33),
             title: Text("Save & Manage Passwords",
 

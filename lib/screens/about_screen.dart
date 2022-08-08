@@ -11,19 +11,18 @@ class _AboutScreenState extends State<AboutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff151922),
+        backgroundColor: Color(0xfffaf9f9),
         appBar: AppBar(
-          brightness: Brightness.dark,
           elevation: 0.0,
-          backgroundColor: Color(0xff242a33),
+          backgroundColor: Color(0xffffffff),
           title: Text(
             'About',
-            style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.black,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold),
           ),
           leading: IconButton(
             icon: Icon(
               Icons.arrow_back_ios_new_rounded,
-              color: Colors.white,
+              color: Colors.black,
             ),
             onPressed: () => Navigator.pop(context),
           ),
@@ -36,7 +35,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 height: 60.0,
                 width: MediaQuery.of(context).size.width - 30.0,
                 decoration: BoxDecoration(
-                    color: Color(0xff343d50),
+                    color: Color(0xff020000),
                     borderRadius: BorderRadius.circular(8.0)),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -71,10 +70,10 @@ class _AboutScreenState extends State<AboutScreen> {
                     gradient: LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
-                        colors: [Color(0xff2aa7f3), Color(0xff2463f6)]),
+                        colors: [Color(0xff000405), Color(0xff2463f6)]),
                     borderRadius: BorderRadius.circular(8.0)),
                 child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10.0, 17.0, 10.0, 0.0),
+                    padding: const EdgeInsets.fromLTRB(70.0, 17.0, 10.0, 0.0),
                     child: Text(
                       'Created by PassHub INC.',
                       style: TextStyle(

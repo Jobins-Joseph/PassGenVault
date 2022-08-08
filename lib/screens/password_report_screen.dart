@@ -94,19 +94,19 @@ class _PasswordReportScreenState extends State<PasswordReportScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff151922),
+      backgroundColor: Color(0xfffdfdfd),
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Color(0xff242a33),
+        backgroundColor: Color(0xffffffff),
         title: Text(
           'Password Health Report',
-          style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu', fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.black,fontFamily: 'Ubuntu', fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new_rounded,
-            color: Colors.white,
+            color: Colors.black,
           ),
           onPressed: () => Navigator.pop(context),
         ),

@@ -37,16 +37,15 @@ class _FirstEditScreenState extends State<FirstEditScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff2E3647),
+      backgroundColor: Color(0xffffffff),
       appBar: AppBar(
-        brightness: Brightness.dark,
         elevation: 0.0,
-        backgroundColor: Color(0xff2E3647),
+        backgroundColor: Color(0xffffffff),
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
           icon: Icon(
             Icons.arrow_back_ios_new_rounded,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
       ),
@@ -58,7 +57,7 @@ class _FirstEditScreenState extends State<FirstEditScreen> {
             Text(
               'Change Password',
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 25.0,
                   fontWeight: FontWeight.bold),
             ),
@@ -68,7 +67,7 @@ class _FirstEditScreenState extends State<FirstEditScreen> {
             Text(
                 'Enter your current master password to change your master password.',
                 style: TextStyle(
-                    color: Colors.white70,
+                    color: Colors.black,
                     fontWeight: FontWeight.w500,
                     fontSize: 14.0)),
             SizedBox(
@@ -77,7 +76,7 @@ class _FirstEditScreenState extends State<FirstEditScreen> {
             Text(
               'Enter Master Password',
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 15.0,
                   fontWeight: FontWeight.w500),
             ),
@@ -88,7 +87,7 @@ class _FirstEditScreenState extends State<FirstEditScreen> {
               height: 80.0,
               width: MediaQuery.of(context).size.width - 50.0,
               child: TextField(
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black),
                 maxLength: 60,
                 controller: masterPassword,
                 onSubmitted: (value) {
@@ -98,22 +97,22 @@ class _FirstEditScreenState extends State<FirstEditScreen> {
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Colors.black,
                         width: 2.0
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.white10,
+                        color: Colors.black,
                         width: 2.0,
                       ),
                     ),
-                    counterStyle: TextStyle(color: Colors.white),
-                    prefixIcon: Icon(Icons.password_rounded, color: Colors.white,),
+                    counterStyle: TextStyle(color: Colors.black),
+                    prefixIcon: Icon(Icons.password_rounded, color: Colors.black,),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0)),
-                    hintStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.black),
                     hintText: 'Enter Master Password'),
               ),
             ),
@@ -143,7 +142,7 @@ class _FirstEditScreenState extends State<FirstEditScreen> {
                   'Done',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold),
                 )),

@@ -1,7 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:password_manager/getStartedScreen/second_screen.dart';
 
 class FirstScreen extends StatefulWidget {
@@ -15,7 +14,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff151922),
+      backgroundColor: Color(0xfff1f1f1),
       body: SafeArea(
         child: Column(
           children: [
@@ -30,7 +29,7 @@ class _FirstScreenState extends State<FirstScreen> {
               children: [
                 Icon(
                   Icons.security_rounded,
-                  color: Colors.blueGrey.shade50,
+                  color: Colors.black,
                   size:
                   MediaQuery.of(context).size.width < 800 ? 220.0 : 240.0,
                 ),
@@ -42,7 +41,7 @@ class _FirstScreenState extends State<FirstScreen> {
             Text(
               'Passhub - Password Manager',
               style: TextStyle(
-                  color: Colors.white,fontFamily: 'Ubuntu',
+                  color: Colors.black,fontFamily: 'Ubuntu',
                   fontSize:
                       MediaQuery.of(context).size.width < 800 ? 30.0 : 36.0),
               textAlign: TextAlign.center,
@@ -53,7 +52,7 @@ class _FirstScreenState extends State<FirstScreen> {
             Text(
               'A Complete Solution for securely Managing Your Passwords',
               style: TextStyle(
-                  color: Colors.white,fontFamily: 'Ubuntu',
+                  color: Colors.black,fontFamily: 'Ubuntu',
                   fontSize:
                   MediaQuery.of(context).size.width < 800 ? 24.0 : 30.0),
               textAlign: TextAlign.center,
@@ -63,7 +62,7 @@ class _FirstScreenState extends State<FirstScreen> {
               child: Text(
                 '',
                 style: TextStyle(
-                    color: Colors.white70,
+                    color: Colors.black,
                     fontSize:
                         MediaQuery.of(context).size.width < 800 ? 14.0 : 20.0),
                 textAlign: TextAlign.center,
@@ -85,7 +84,7 @@ class _FirstScreenState extends State<FirstScreen> {
                         gradient: LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
-                            colors: [Color(0xff2aa7f3), Color(0xff2463f6)]),
+                            colors: [Color(0xff020000), Color(0xff050000)]),
                         borderRadius: BorderRadius.circular(35.0)),
                     child: Center(
                       child: Text(

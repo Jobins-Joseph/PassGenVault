@@ -16,7 +16,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
   bool numbersRequired = true;
   bool symbolsRequired = true;
 
-  String _randomString(double length) {
+  Future<String> _randomString(double length) async {
     int _length = length.toInt();
     var rand = new Random();
     var codeUnits = new List.generate(_length, (index) {
@@ -50,12 +50,11 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xff151922),
+    return Scaffold( 
+      backgroundColor: Color(0xffffffff),
       appBar: AppBar(
-        brightness: Brightness.dark,
         elevation: 0.0,
-        backgroundColor: Color(0xff242a33),
+        backgroundColor: Color(0xff030000),
         title: Text(
           'Password Generator',
           style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu', fontWeight: FontWeight.bold),
@@ -65,7 +64,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
           icon: Icon(Icons.arrow_back_ios_new_rounded),
           onPressed: () => Navigator.pop(context),
           color: Colors.white,
-        ),
+        ), systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,7 +77,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
             child: Text(
               'Generated Password',
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 16.0,
                   fontFamily: 'Ubuntu',
                   fontWeight: FontWeight.w500),
@@ -95,7 +94,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
                 width: MediaQuery.of(context).size.width - 50.0,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    color: Color(0xff2E3647)),
+                    color: Color(0xff050404)),
                 child: Center(
                     child: Text(
                   _password,
@@ -113,7 +112,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
             child: Text(
               'LENGTH: $length',
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.w500,fontFamily: 'Ubuntu',
                   fontSize: 14.0),
             ),
@@ -142,7 +141,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
             padding: const EdgeInsets.fromLTRB(23.0, 0.0, 23.0, 0.0),
             child: Text(
               'SETTINGS',
-              style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu', fontSize: 15.0),
+              style: TextStyle(color: Colors.black,fontFamily: 'Ubuntu', fontSize: 15.0),
             ),
           ),
           SizedBox(
@@ -244,7 +243,7 @@ class _PasswordGeneratoeState extends State<PasswordGeneratoe> {
                       gradient: LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
-                          colors: [Color(0xff2aa7f3), Color(0xff2463f6)]),
+                          colors: [Color(0xff030000), Color(0xff2463f6)]),
                       borderRadius: BorderRadius.circular(35.0)),
                   child: Center(
                     child: Text(

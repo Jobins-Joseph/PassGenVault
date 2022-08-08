@@ -48,11 +48,11 @@ class _EditTaskState extends State<EditTask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff151922),
+        backgroundColor: Color(0xfffdfdfd),
         appBar: AppBar(
           brightness: Brightness.dark,
           elevation: 0.0,
-          backgroundColor: Color(0xff151922),
+          backgroundColor: Color(0xff000205),
           centerTitle: false,
           title: Text(
             'Edit Password',
@@ -77,7 +77,7 @@ class _EditTaskState extends State<EditTask> {
               Text(
                 'Website Name',
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
@@ -88,7 +88,7 @@ class _EditTaskState extends State<EditTask> {
                 height: 75.0,
                 width: MediaQuery.of(context).size.width - 40.0,
                 child: TextFormField(
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                   maxLength: 60,
                   initialValue: widget.title,
                   onChanged: (value) {
@@ -98,22 +98,22 @@ class _EditTaskState extends State<EditTask> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Colors.black,
                         width: 2.0
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.white10,
+                        color: Colors.black,
                         width: 2.0,
                       ),
                     ),
-                    counterStyle: TextStyle(color: Colors.white),
+                    counterStyle: TextStyle(color: Colors.black),
                     prefixIcon: Icon(
                       Icons.title,
                       size: 24,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0)),
@@ -126,7 +126,7 @@ class _EditTaskState extends State<EditTask> {
               Text(
                 'Username/Email',
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
@@ -137,7 +137,7 @@ class _EditTaskState extends State<EditTask> {
                 height: 75.0,
                 width: MediaQuery.of(context).size.width - 40.0,
                 child: TextFormField(
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                   maxLength: 60,
                   initialValue: widget.username,
                   onChanged: (value) {
@@ -147,22 +147,22 @@ class _EditTaskState extends State<EditTask> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Colors.black,
                         width: 2.0
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.white10,
+                        color: Colors.black,
                         width: 2.0,
                       ),
                     ),
-                    counterStyle: TextStyle(color: Colors.white),
+                    counterStyle: TextStyle(color: Colors.black),
                     prefixIcon: Icon(
                       Icons.email,
                       size: 24,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0)),
@@ -175,7 +175,7 @@ class _EditTaskState extends State<EditTask> {
               Text(
                 'Password',
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 14.0,fontFamily: 'Ubuntu',
                     fontWeight: FontWeight.w500),
               ),
@@ -186,7 +186,7 @@ class _EditTaskState extends State<EditTask> {
                 height: 75.0,
                 width: MediaQuery.of(context).size.width - 40.0,
                 child: TextFormField(
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                   maxLength: 60,
                   initialValue: widget.password,
                   onChanged: (value) {
@@ -196,22 +196,22 @@ class _EditTaskState extends State<EditTask> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Colors.black,
                         width: 2.0
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
-                        color: Colors.white10,
+                        color: Colors.black,
                         width: 2.0,
                       ),
                     ),
-                    counterStyle: TextStyle(color: Colors.white),
+                    counterStyle: TextStyle(color: Colors.black),
                     prefixIcon: Icon(
                       Icons.password_rounded,
                       size: 24,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0)),
@@ -292,14 +292,14 @@ class _EditTaskState extends State<EditTask> {
                     Navigator.pop(context);
                   }
                 },
-                child: Container(
+                child: Container(       
                   height: 60.0,
                   width: MediaQuery.of(context).size.width - 40.0,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
-                          colors: [Color(0xff2aa7f3), Color(0xff2463f6)]),
+                          colors: [Color(0xff000000), Color(0xff2463f6)]),
                       borderRadius: BorderRadius.circular(35.0)),
                   child: Center(
                     child: Text(

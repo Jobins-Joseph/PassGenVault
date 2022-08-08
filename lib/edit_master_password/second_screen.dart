@@ -35,16 +35,16 @@ class _SecondEditScreenState extends State<SecondEditScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff2E3647),
+      backgroundColor: Color(0xfffcfcfc),
       appBar: AppBar(
-        brightness: Brightness.dark,
+
         elevation: 0.0,
-        backgroundColor: Color(0xff2E3647),
+        backgroundColor: Color(0xff030000),
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
             icon: Icon(
               Icons.arrow_back_ios_new_rounded,
-              color: Colors.white,
+              color: Colors.black,
             )),
       ),
       body: Padding(
@@ -55,7 +55,7 @@ class _SecondEditScreenState extends State<SecondEditScreen> {
             Text(
               'Create New Password',
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 25.0,
                   fontWeight: FontWeight.bold),
             ),
@@ -65,7 +65,7 @@ class _SecondEditScreenState extends State<SecondEditScreen> {
             Text(
                 'Your new password must be different from previous used passwords.',
                 style: TextStyle(
-                    color: Colors.white70,
+                    color: Colors.black,
                     fontWeight: FontWeight.w500,
                     fontSize: 14.0)),
             SizedBox(
@@ -74,7 +74,7 @@ class _SecondEditScreenState extends State<SecondEditScreen> {
             Text(
               'Enter New Password',
               style: TextStyle(
-                  color: Colors.white70,
+                  color: Colors.black,
                   fontSize: 15.0,
                   fontWeight: FontWeight.w500),
             ),
@@ -85,7 +85,7 @@ class _SecondEditScreenState extends State<SecondEditScreen> {
               height: 80.0,
               width: MediaQuery.of(context).size.width - 50.0,
               child: TextField(
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black),
                 maxLength: 60,
                 controller: newMasterPassword,
                 onSubmitted: (value) {
@@ -94,7 +94,7 @@ class _SecondEditScreenState extends State<SecondEditScreen> {
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(color: Colors.white, width: 2.0),
+                      borderSide: BorderSide(color: Colors.black, width: 2.0),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
@@ -103,15 +103,15 @@ class _SecondEditScreenState extends State<SecondEditScreen> {
                         width: 2.0,
                       ),
                     ),
-                    counterStyle: TextStyle(color: Colors.white),
+                    counterStyle: TextStyle(color: Colors.black),
                     prefixIcon: Icon(
                       Icons.password_rounded,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0)),
                     hintText: 'Enter New Password',
-                    hintStyle: TextStyle(color: Colors.white)),
+                    hintStyle: TextStyle(color: Colors.black)),
               ),
             ),
             SizedBox(
@@ -146,7 +146,7 @@ class _SecondEditScreenState extends State<SecondEditScreen> {
                   'Reset Password',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 22.0,
                       fontWeight: FontWeight.bold),
                 )),
@@ -160,7 +160,7 @@ class _SecondEditScreenState extends State<SecondEditScreen> {
               children: [
                 Text(
                   status,
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
               ],
             )

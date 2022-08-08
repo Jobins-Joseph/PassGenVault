@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Text(
               'No Passwords Added',
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Ubuntu',),
@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Text(
               "Click on the ' + ' icon to add",
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 20.0,fontFamily: 'Ubuntu',
                   fontWeight: FontWeight.bold),
             ),
@@ -98,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton(
         tooltip: 'Add new password',
         child: Container(
-          width: 60,
+          width: 500,
           height: 60,
           child: Icon(
             Icons.add,
@@ -108,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  colors: [Color(0xff2aa7f3), Color(0xff2463f6)]),
+                  colors: [Color(0xff000303), Color(0xff000000)]),
               borderRadius: BorderRadius.circular(35.0)),
         ),
         onPressed: () => Navigator.push(
@@ -118,24 +118,24 @@ class _HomeScreenState extends State<HomeScreen> {
                       refershPasswords: refreshNotes,
                     ))),
       ),
-      backgroundColor: Color(0xff151922),
+      backgroundColor: Colors.white,
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
             floating: true,
             title: Text("Save & Manage Passwords",
 
-                style: TextStyle(color: Colors.white,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold),),
-            backgroundColor: Color(0xff050000),
+                style: TextStyle(color: Colors.black,fontFamily: 'Ubuntu',fontWeight: FontWeight.bold),),
+            backgroundColor: Color(0xffffffff),
             actions: [
               IconButton(
                   onPressed: () => Navigator.push(context,
                       MaterialPageRoute(builder: (_) => PasswordGeneratoe())),
-                  icon: Icon(Icons.security, color: Colors.white)),
+                  icon: Icon(Icons.security, color: Colors.black)),
               IconButton(
                   onPressed: () => Navigator.push(
                       context, MaterialPageRoute(builder: (_) => Settings())),
-                  icon: Icon(Icons.settings, color: Colors.white)),
+                  icon: Icon(Icons.settings, color: Colors.black)),
             ], systemOverlayStyle: SystemUiOverlayStyle.light,
           ),
           SliverPadding(
@@ -144,14 +144,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Center(
                     child:Text('Your Passwords (${passwords.length})',
                         style: TextStyle(
+
                           color: Colors.red,
                           fontSize: 18.0,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.bold,
                             fontFamily: 'Ubuntu'
                         ))),
                 ),
           ),
-          SliverToBoxAdapter(child: SizedBox(height: 15.0)),
+          SliverToBoxAdapter(child: SizedBox(height: 20.0)),
           passwords.length == 0
               ? SliverToBoxAdapter(
                   child: noPasswordsFound(),
@@ -162,10 +163,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       ListTile(
                         shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(35.0)),
-                          tileColor: Color(0xff242a33),
+borderRadius:BorderRadius.circular(90)
+
+                        ),
+                          tileColor: Colors.black,
                           textColor: Colors.white,
-                         contentPadding: EdgeInsets.fromLTRB(30.0, 5.0, 5.0, 0.0),
+                         contentPadding: EdgeInsets.fromLTRB(50.0, 5.0, 5.0, 0.0),
                         title: Text(Encrypt.instance.encryptOrDecryptText(passwords[index].title, false),
                             style: TextStyle(
                                 color: Colors.white,
@@ -229,7 +232,7 @@ class _MenuState extends State<Menu> {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black26,
+              color: Colors.white,
               blurRadius: 25.0,
               offset: Offset(0.0, 0.9),
             )
