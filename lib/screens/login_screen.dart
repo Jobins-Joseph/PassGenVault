@@ -3,6 +3,36 @@ import 'package:password_manager/db/user_database.dart';
 import 'package:password_manager/encrypt/encrypter.dart';
 import 'package:password_manager/model/user_info_model.dart';
 import 'package:password_manager/screens/home_screen.dart';
+import 'package:flutter/services.dart';
+import 'package:local_auth/local_auth.dart';
+
+class LocalAuthApi {
+  static final _auth = LocalAuthentication();
+
+  static Future<bool> hasbiometrics() async {
+    try {
+      return await _auth.canCheckBiometrics;
+    } on PlatformException catch (e) {
+      return false;
+    }
+  }
+  static Future<bool> authenticate() async {
+    final isAvailable = await hasbiometrics();
+    if(!isAvailable) return false;
+
+    try {
+      return await _auth.authenticateWithBiometrics(
+        localizedReason: 'Scan Fingerprint to enter',
+        useErrorDialogs: true,
+        stickyAuth: true,
+      );
+    }
+    on PlatformException catch (e){
+      return false;
+
+    }
+  }
+}
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -142,8 +172,16 @@ class _LoginScreenState extends State<LoginScreen> {
               Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: GestureDetector(
-                      onTap: () {
-                        if (masterPassword.text == Encrypt.instance.encryptOrDecryptText(users[0].masterpswd, false)) {
+                      onTap: () async {
+                        final isAuthenticated = await LocalAuthApi.authenticate();
+
+                        if (isAuthenticated){
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (context) => HomeScreen() ),
+                          );
+                        }
+
+                        else if (masterPassword.text == Encrypt.instance.encryptOrDecryptText(users[0].masterpswd, false)) {
                           Navigator.pushReplacement(context,
                               MaterialPageRoute(builder: (_) => HomeScreen()));
                         } else {

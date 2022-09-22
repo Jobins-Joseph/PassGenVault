@@ -35,6 +35,8 @@ dependencies:
   encrypt: ^5.0.1
   email_auth: ^1.0.0
   google_fonts: ^2.0.0
+  local_auth: ^0.6.3+4
+
 
 
 dev_dependencies:
